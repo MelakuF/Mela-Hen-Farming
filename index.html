@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mela Hen Farming - Premium Chicken Products</title>
+     <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Mela Hen Farming Logo" class="logo-img">
+                <div class="logo-text">
+                    <div class="logo-main">Mela Hen Farming</div>
+                    <div class="logo-sub">Premium Poultry Products</div>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Premium Chicken Products</h1>
+            <p>Farm-fresh eggs, quality meat, and processed foods from our sustainable farm</p>
+            <a href="#products" class="cta-button">Explore Our Products</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title fade-in">Our Premium Products</h2>
+            <div class="products-grid">
+                <div class="product-card fade-in" onclick="openModal('eggs')">
+                    <div class="product-image" style="background-image: url('images/egg.jpg');">
+                        <div class="product-badge">Fresh Daily</div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Farm Fresh Eggs</h3>
+                        <p>Premium quality eggs from free-range hens, collected daily for maximum freshness.</p>
+                        <ul class="product-features">
+                            <li>Free-range chickens</li>
+                            <li>Collected daily</li>
+                            <li>Rich in nutrients</li>
+                            <li>Various sizes available</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="product-card fade-in" onclick="openModal('meat')">
+                    <div class="product-image" style="background-image: url('images/meat.jpg');">
+                        <div class="product-badge">Premium Cut</div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Chicken Meat</h3>
+                        <p>High-quality, tender chicken meat from healthy, naturally-raised chickens.</p>
+                        <ul class="product-features">
+                            <li>Hormone-free</li>
+                            <li>Naturally raised</li>
+                            <li>Various cuts available</li>
+                            <li>Fresh or frozen</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="product-card fade-in" onclick="openModal('processed')">
+                    <div class="product-image" style="background-image: url('images/food.jpg');">
+                        <div class="product-badge">Artisan Made</div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Processed Foods</h3>
+                        <p>Delicious processed chicken products made with traditional recipes and modern techniques.</p>
+                        <ul class="product-features">
+                            <li>Sausages & salamis</li>
+                            <li>Smoked products</li>
+                            <li>Ready-to-cook items</li>
+                            <li>Custom processing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h2>About Mela Hen Farming</h2>
+                    <p>For over two decades, Mela Hen Farming has been committed to providing the highest quality chicken products to our community. Our sustainable farming practices ensure healthy, happy chickens and superior products.</p>
+                    <p>We believe in ethical farming, environmental responsibility, and delivering products that exceed our customers' expectations. From our farm to your table, we maintain the highest standards of quality and freshness.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <div class="stat-label">Happy Chickens</div>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">20+</span>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">1000+</span>
+                            <div class="stat-label">Satisfied Customers</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image fade-in">
+                    <img src="images/farm.jpg" alt="Our Farm" style="width: 100%; border-radius: 15px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-form fade-in">
+                    <form onsubmit="submitForm(event)">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your requirements..." required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info fade-in">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">Dire Dawa,Ethiopia</div>
+                    <div class="contact-item">0930338942</div>
+                    <div class="contact-item">melakufiseha097@gmail.com</div>
+                    <div class="contact-item">Mon-Sat: 7:00 AM - 6:00 PM</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mela Hen Farming. All rights reserved. | Committed to sustainable farming and quality products.</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
